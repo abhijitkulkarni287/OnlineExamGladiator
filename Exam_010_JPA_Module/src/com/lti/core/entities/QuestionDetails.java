@@ -23,8 +23,15 @@ public class QuestionDetails
 	//1)ExaminationDetails table bidirectional
 	@OneToOne
 	ExaminationDetails exam;
+
+	
 	
 	//Constructors
-	
+	public QuestionDetails(int questionId, String correctOption, ExaminationDetails exam) 
+	{
+		this.questionId = questionId;
+		this.correctOption = correctOption;
+		this.exam = exam;
+	}
 
 }
