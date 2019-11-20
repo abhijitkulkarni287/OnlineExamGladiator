@@ -1,4 +1,4 @@
-package com.lti.web.entities;
+package com.lti.core.entities;
 
 import java.sql.Date;
 

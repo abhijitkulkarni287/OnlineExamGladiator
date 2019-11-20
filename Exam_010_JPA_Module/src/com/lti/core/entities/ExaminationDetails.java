@@ -1,7 +1,8 @@
-package com.lti.web.entities;
+package com.lti.core.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 /*
 This entity will store details of test subjects
@@ -18,6 +19,9 @@ public class ExaminationDetails
 	int numberOfQuestions;
 	
 	//Association Mappings
+	//1) QuestionDetails table birectional
+	@OneToOne
+	QuestionDetails question;
 	
 	//Constructors
 	public ExaminationDetails() {}
@@ -53,6 +57,12 @@ public class ExaminationDetails
 	}
 	public void setNumberOfQuestions(int numberOfQuestions) {
 		this.numberOfQuestions = numberOfQuestions;
+	}
+	public QuestionDetails getQuestion() {
+		return question;
+	}
+	public void setQuestion(QuestionDetails question) {
+		this.question = question;
 	}
 	
 	

@@ -1,4 +1,4 @@
-package com.lti.web.entities;
+package com.lti.core.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
