@@ -28,6 +28,8 @@ public class StudentDetails
 	@OneToOne
 	LoginDetails login;
 	
+	
+	
 	//Constructors
 	public StudentDetails() {}
 	public StudentDetails(int studentId, String firstName, String lastName, Date dateOfBirth, String gender,String email, long phoneNumber) 
