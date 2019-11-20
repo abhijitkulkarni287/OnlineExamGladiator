@@ -1,21 +1,28 @@
 package com.lti.core.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 /*
 This entity will store details of test subjects
  */
 
 @Entity
+@Table(name="EXAM")
 public class ExaminationDetails 
 {
 	//Attributes for entity
 	@Id
+	@Column(name="EXAM_ID")
 	int examId;
+	@Column(name="SUBJECT")
 	String examName;
+	@Column(name="EXAM_DURATION")
 	int examDuration;
+	@Column(name="NO_OF_QUESTIONS")
 	int numberOfQuestions;
 	
 	//Association Mappings
