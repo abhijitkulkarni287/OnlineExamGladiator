@@ -27,6 +27,7 @@ public class QuestionDetails
 	
 	
 	//Constructors
+	public QuestionDetails() {}
 	public QuestionDetails(int questionId, String correctOption, ExaminationDetails exam) 
 	{
 		this.questionId = questionId;
