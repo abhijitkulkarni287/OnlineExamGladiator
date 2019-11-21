@@ -3,6 +3,7 @@ package com.lti.core.entities;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -18,16 +19,13 @@ public class FileDetails
 	@Column(name="FILE_NAME")
 	String fileName;
 	
-	@OneToOne
-	ExaminationDetails examDetails;
 	
 	//Constructors
 	public FileDetails() {}
-	public FileDetails(int fileId, String fileName, ExaminationDetails examDetails) {
-		super();
+	public FileDetails(int fileId, String fileName) 
+	{
 		this.fileId = fileId;
 		this.fileName = fileName;
-		this.examDetails = examDetails;
 	}
 	
 	//Getter setter method
@@ -43,11 +41,4 @@ public class FileDetails
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
-	public ExaminationDetails getExamDetails() {
-		return examDetails;
-	}
-	public void setExamDetails(ExaminationDetails examDetails) {
-		this.examDetails = examDetails;
-	}
-
 }

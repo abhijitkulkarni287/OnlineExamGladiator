@@ -25,11 +25,6 @@ public class ExaminationDetails
 	@Column(name="NO_OF_QUESTIONS")
 	int numberOfQuestions;
 	
-	//Association Mappings
-	//1) QuestionDetails table birectional
-	@OneToOne
-	QuestionDetails question;
-	
 	//Constructors
 	public ExaminationDetails() {}
 	public ExaminationDetails(int examId, String examName, int examDuration, int numberOfQuestions) 
@@ -65,12 +60,7 @@ public class ExaminationDetails
 	public void setNumberOfQuestions(int numberOfQuestions) {
 		this.numberOfQuestions = numberOfQuestions;
 	}
-	public QuestionDetails getQuestion() {
-		return question;
-	}
-	public void setQuestion(QuestionDetails question) {
-		this.question = question;
-	}
+
 	
 	
 }

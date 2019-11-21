@@ -1,11 +1,13 @@
 package com.lti.core.daos;
 
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
 import com.lti.core.entities.ExaminationDetails;
+import com.lti.core.entities.FileDetails;
 import com.lti.core.entities.QuestionDetails;
 
 @Repository("examDao")
@@ -34,10 +36,10 @@ public class ExamDaoImpl implements ExamDao
 	public static void main(String[] args) 
 	{
 		ExaminationDetails examDetails = new ExaminationDetails(101, "java", 60, 40);
-		QuestionDetails questionDetails = new QuestionDetails(101, "spring",examDetails);
+		FileDetails fileDetails = new FileDetails(1, "javaQuestions.xlsx");
+		QuestionDetails questionDetails = new QuestionDetails(101, "simple language?","java",examDetails,fileDetails);
 		ExamDaoImpl examDaoImpl = new ExamDaoImpl();
 		examDaoImpl.insertQuestionDetails(examDetails,questionDetails);
 		
 	}
-
 }
