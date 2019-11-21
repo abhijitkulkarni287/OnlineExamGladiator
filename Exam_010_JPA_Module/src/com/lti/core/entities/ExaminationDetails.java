@@ -71,7 +71,6 @@ public class ExaminationDetails
 	public void setQuestion(QuestionDetails question) {
 		this.question = question;
 	}
-	//updation
-	
+	//updation in this file
 	
 }
