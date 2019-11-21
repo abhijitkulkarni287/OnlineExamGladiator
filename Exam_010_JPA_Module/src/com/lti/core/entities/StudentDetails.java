@@ -2,9 +2,11 @@ package com.lti.core.entities;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 /*
 Student Details are stored in this entity whenever a new student registers
@@ -12,23 +14,29 @@ from the registration page
 */
 
 @Entity
+@Table(name="STUDENT")
 public class StudentDetails 
 {
 	//Attributes for the entity
 	@Id
+	@Column(name="STUDENT_ID")
 	int studentId;
+	@Column(name="FIRST_NAME")
 	String firstName;
+	@Column(name="LAST_NAME")
 	String lastName;
+	@Column(name="DOB")
 	Date dateOfBirth;
+	@Column(name="GENDER")
 	String gender;
+	@Column(name="EMAIL")
 	String email;
+	@Column(name="PHONE")
 	long phoneNumber;
 	
 	//Association Mapping
 	@OneToOne
 	LoginDetails login;
-	
-	
 	
 	//Constructors
 	public StudentDetails() {}
