@@ -5,6 +5,7 @@ import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -18,9 +19,6 @@ from the registration page
 public class StudentDetails 
 {
 	//Attributes for the entity
-	@Id
-	@Column(name="STUDENT_ID")
-	int studentId;
 	@Column(name="FIRST_NAME")
 	String firstName;
 	@Column(name="LAST_NAME")
@@ -33,31 +31,38 @@ public class StudentDetails
 	String email;
 	@Column(name="PHONE")
 	long phoneNumber;
+	@Column(name="CITY")
+	String city;
+	@Column(name="STUDENT_STATE")
+	String state;
 	
 	//Association Mapping
 	@OneToOne
+	@JoinColumn(name="STUDENT_ID")
 	LoginDetails login;
 	
 	//Constructors
 	public StudentDetails() {}
-	public StudentDetails(int studentId, String firstName, String lastName, Date dateOfBirth, String gender,String email, long phoneNumber) 
+	public StudentDetails( String firstName, String lastName, Date dateOfBirth, String gender,String email, long phoneNumber, String city, String state) 
 	{
-		this.studentId = studentId;
+		//this.studentId = studentId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.dateOfBirth = dateOfBirth;
 		this.gender = gender;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
+		this.city = city;
+		this.state = state;
 	}
 	
 	//Getters and Setters for the attributes
-	public int getStudentId() {
+	/*public int getStudentId() {
 		return studentId;
 	}
 	public void setStudentId(int studentId) {
 		this.studentId = studentId;
-	}
+	}*/
 	public String getFirstName() {
 		return firstName;
 	}
@@ -100,9 +105,17 @@ public class StudentDetails
 	public void setLogin(LoginDetails login) {
 		this.login = login;
 	}
-	
-	
-	
-	
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}	
 
 }
