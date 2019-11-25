@@ -1,3 +1,5 @@
+
+  
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -11,7 +13,6 @@ div.background {
   background-size:cover;
   border: 2px solid black;
 }
-
 div.transbox {
   margin: 260px;
   background-color: #ffffff;
@@ -19,7 +20,6 @@ div.transbox {
   opacity: 0.6;
   filter: alpha(opacity=60); /* For IE8 and earlier */
 }
-
 div.transbox p {
   margin: 5%;
   font-weight: bold;
@@ -37,7 +37,6 @@ h3{
   text-align: center; 
   text-decoration: underline
 }
-
 table{
   font-family: Calibri; 
   color:white; 
@@ -214,6 +213,17 @@ Female <input type="radio" name="Gender" value="Female" />
  <tr>
 <td>
 				PASSWORD:
+			</td>
+
+			<td>
+				<input type="Password" placeholder="Password" name="">
+			</td>
+		</tr>
+		<!----- password ----------------------------------------------------------->
+
+ <tr>
+<td>
+				 CONFIRM PASSWORD:
 			</td>
 
 			<td>
